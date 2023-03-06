@@ -12,11 +12,9 @@ import SwiftUI
 //2. Is there any better way to copy?
 //3. How this work with lists?
 struct DogScreenView: View {
-    
     @StateObject var viewModel: DogViewModel = DogViewModel()
     
     var body: some View {
-
         VStack {
             DogTopSectionView(
                 dogUiModel: viewModel.screenState,
@@ -35,20 +33,7 @@ struct DogScreenView: View {
     }
 }
 
-//struct DogContentView {
-//    var dogUiModel: DogUIModel
-//
-//    var body : some View {
-//        if (dogUiModel.isFullScreenLoading) {
-//            LoadingView
-//        } else {
-//            DogTopSectionView(...)
-//        }
-//    }
-//}
-
 struct DogTopSectionView : View {
-    
     var dogUiModel: DogScreen
     let onClickTitle: () -> Void
     let onClickDescription: () -> Void
@@ -70,7 +55,6 @@ struct DogTopSectionView : View {
 }
 
 struct BreedTitleView : View {
-    
     var breedTitle: String
     let onClick: () -> Void
     
