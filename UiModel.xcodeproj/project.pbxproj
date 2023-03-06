@@ -11,7 +11,7 @@
 		74E96A5829B239D100E33FA2 /* DogScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E96A5729B239D100E33FA2 /* DogScreenView.swift */; };
 		74E96A5A29B239D400E33FA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E96A5929B239D400E33FA2 /* Assets.xcassets */; };
 		74E96A5D29B239D400E33FA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E96A5C29B239D400E33FA2 /* Preview Assets.xcassets */; };
-		74E96A6529B23A0C00E33FA2 /* DogUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E96A6429B23A0C00E33FA2 /* DogUIModel.swift */; };
+		74E96A6529B23A0C00E33FA2 /* DogScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E96A6429B23A0C00E33FA2 /* DogScreen.swift */; };
 		74E96A6929B23AEC00E33FA2 /* DogScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E96A6829B23AEC00E33FA2 /* DogScreenViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +21,7 @@
 		74E96A5729B239D100E33FA2 /* DogScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogScreenView.swift; sourceTree = "<group>"; };
 		74E96A5929B239D400E33FA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74E96A5C29B239D400E33FA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		74E96A6429B23A0C00E33FA2 /* DogUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogUIModel.swift; sourceTree = "<group>"; };
+		74E96A6429B23A0C00E33FA2 /* DogScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogScreen.swift; sourceTree = "<group>"; };
 		74E96A6829B23AEC00E33FA2 /* DogScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogScreenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,10 +55,10 @@
 		74E96A5429B239D100E33FA2 /* UiModel */ = {
 			isa = PBXGroup;
 			children = (
-				74E96A6629B23AC700E33FA2 /* viewmodel */,
-				74E96A6329B239F500E33FA2 /* uimodels */,
 				74E96A5529B239D100E33FA2 /* UiModelApp.swift */,
 				74E96A5729B239D100E33FA2 /* DogScreenView.swift */,
+				74E96A6629B23AC700E33FA2 /* viewmodel */,
+				74E96A6329B239F500E33FA2 /* uimodels */,
 				74E96A5929B239D400E33FA2 /* Assets.xcassets */,
 				74E96A5B29B239D400E33FA2 /* Preview Content */,
 			);
@@ -76,7 +76,7 @@
 		74E96A6329B239F500E33FA2 /* uimodels */ = {
 			isa = PBXGroup;
 			children = (
-				74E96A6429B23A0C00E33FA2 /* DogUIModel.swift */,
+				74E96A6429B23A0C00E33FA2 /* DogScreen.swift */,
 			);
 			path = uimodels;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 				74E96A5829B239D100E33FA2 /* DogScreenView.swift in Sources */,
 				74E96A6929B23AEC00E33FA2 /* DogScreenViewModel.swift in Sources */,
 				74E96A5629B239D100E33FA2 /* UiModelApp.swift in Sources */,
-				74E96A6529B23A0C00E33FA2 /* DogUIModel.swift in Sources */,
+				74E96A6529B23A0C00E33FA2 /* DogScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
