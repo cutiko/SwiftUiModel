@@ -16,19 +16,22 @@ struct DogScreenView: View {
     @StateObject var viewModel: DogViewModel = DogViewModel()
     
     var body: some View {
-        
-        DogTopSectionView(
-            dogUiModel: viewModel.screenState,
-            onClickTitle: {
-                viewModel.changeBreed()
-            },
-            onClickDescription: {
-                viewModel.changeAge()
-            },
-            onBreedButtonClicked: {
-                viewModel.functionalChangeBreed()
-            }
-        )
+
+        VStack {
+            DogTopSectionView(
+                dogUiModel: viewModel.screenState,
+                onClickTitle: {
+                    viewModel.changeBreed()
+                },
+                onClickDescription: {
+                    viewModel.changeAge()
+                },
+                onBreedButtonClicked: {
+                    viewModel.functionalChangeBreed()
+                }
+            )
+            DogsListView(dogUiScreen: $viewModel.screenState)
+        }
     }
 }
 
@@ -46,7 +49,7 @@ struct DogScreenView: View {
 
 struct DogTopSectionView : View {
     
-    var dogUiModel: DogUIModel
+    var dogUiModel: DogScreen
     let onClickTitle: () -> Void
     let onClickDescription: () -> Void
     let onBreedButtonClicked: () -> Void
@@ -63,9 +66,7 @@ struct DogTopSectionView : View {
                 onBreedButtonClicked()
             }
         }
-
     }
-    
 }
 
 struct BreedTitleView : View {
@@ -83,7 +84,6 @@ struct BreedTitleView : View {
 }
 
 struct AgeDescriptionView : View {
-    
     var ageDescription: String
     let onClick: () -> Void
     
@@ -97,7 +97,6 @@ struct AgeDescriptionView : View {
 }
 
 struct BreedButton : View {
-    
     let onClick: () -> Void
     
     var body: some View {
@@ -107,7 +106,38 @@ struct BreedButton : View {
             Text("Click to change Breed")
         }
     }
-    
+}
+
+struct DogsListView : View {
+    @Binding var dogUiScreen: DogScreen
+
+    var body: some View {
+        VStack {
+            Toggle(isOn: $dogUiScreen.showList) {
+                Text("Show List")
+            }
+            if dogUiScreen.showList {
+                List(dogUiScreen.dogList) { dog in
+                    DogRowView(title: dog.name, age: dog.age)
+                }
+            } else {
+                Text("Empty State")
+            }
+        }
+    }
+}
+
+struct DogRowView: View {
+    var title: String
+    var age: String
+
+    var body: some View {
+        HStack {
+            Text(title)
+            Spacer()
+            Text(age)
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
